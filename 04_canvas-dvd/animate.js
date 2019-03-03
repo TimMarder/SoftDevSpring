@@ -12,6 +12,8 @@ var ydir = true;
 var xdir = true;
 var x = 300;
 var y = 300;
+var rectWidth = 100;
+var rectHeight = 50;
 
 var clear = function () {
   ctx.clearRect(0, 0, c.width, c.height);
@@ -83,7 +85,16 @@ var dvd = function (id) {
 
 var dotButton = document.getElementById("circle");
 dotButton.addEventListener('click', drawDot);
+
 var stopButton = document.getElementById("stop");
 stopButton.addEventListener('click', stopIt);
+
 var dvdButton = document.getElementById("dvd");
-dvdButton.addEventListener('click', dvd);
+
+dvdButton.addEventListener('click', function(e) {
+    console.log(requestID);
+    x = Math.floor(Math.random() * (c.width-rectWidth));
+    y = Math.floor(Math.random() * (c.height-rectHeight));
+    dvd();
+}
+);
