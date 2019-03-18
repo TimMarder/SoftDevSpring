@@ -1,3 +1,8 @@
+// Team Spongebob -- Tim Marder & Jared Asch
+// SoftDev2 pd06
+// K#10 -- Ask Circles [Change || Die]
+// 2019-03-14
+
 var pic = document.getElementById("vimage");
 
 function dot(x, y){
